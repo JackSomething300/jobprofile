@@ -17,9 +17,9 @@ namespace JOBProfile.Infrastructure.Repositories
 
         }
 
-        Task<IEnumerable<Recipies>> IRecipiesRepository.GetAllAsync()
+        async Task<IEnumerable<Recipies>> IRecipiesRepository.GetAllAsync()
         {
-            throw new NotImplementedException();
+            return (IEnumerable<Recipies>)_recipiesContext.Recipies.ToList();
         }
     }
 }
