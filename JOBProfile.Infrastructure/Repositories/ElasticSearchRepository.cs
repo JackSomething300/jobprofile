@@ -25,18 +25,14 @@ namespace JOBProfile.Infrastructure.Repositories
             return result.Documents.ToList();
         }
 
-        public async Task IndexRecipy()
+        public async Task<Recipies> IndexRecipy(Recipies recipy)
         {
-           var recipy = new Recipies()
+            if (recipy != null)
             {
-               Name = "Cottage Pie",
-               CookingInstructions = "Cook well before serving",
-               Description = "Best Pie Ever",
-               Ingredients = new List<string> { "Cellery", "Minse", "Beef Stock" }
-           };
+                await _client.IndexAsync<Recipies>(recipy, x => x.Index("recipies"));
+            }
 
-            await _client.IndexAsync<Recipies>(recipy, x => x.Index("recipies"));
-
+            return recipy;
         }
     }
 }

@@ -10,6 +10,6 @@ namespace JOBProfile.Core.Repositories
     public interface IElasticSearchProvider
     {
         Task<List<Recipies>> GetAllRecipies();
-        Task IndexRecipy();
+        Task<Recipies> IndexRecipy(Recipies recipies);
     }
 }

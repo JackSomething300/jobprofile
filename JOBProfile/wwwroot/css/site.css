@@ -16,3 +16,10 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.tech-block {
+    border: 1px solid black;
+    width: 400px;
+    height: 200px;
+    padding-top: 10px;
+}

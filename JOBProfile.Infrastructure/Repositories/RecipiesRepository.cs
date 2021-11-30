@@ -20,7 +20,7 @@ namespace JOBProfile.Infrastructure.Repositories
         }
         public Task<Recipies> AddAsync(Recipies entity)
         {
-            throw new NotImplementedException();
+           return _elasticSearchProvider.IndexRecipy(entity);
         }
 
         public Task DeleteAsync(Recipies entity)
