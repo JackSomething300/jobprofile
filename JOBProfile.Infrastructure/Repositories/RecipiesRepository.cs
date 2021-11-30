@@ -10,16 +10,39 @@ using System.Threading.Tasks;
 
 namespace JOBProfile.Infrastructure.Repositories
 {
-    public class RecipiesRepository : Repository<JOBProfile.Core.Entities.Recipies>, IRecipiesRepository
+    public class RecipiesRepository : /*Repository<JOBProfile.Core.Entities.Recipies>*/ IRecipiesRepository
     {
-        public RecipiesRepository(RecipiesContext recipiesContext): base(recipiesContext)
+        public Task<Recipies> AddAsync(Recipies entity)
         {
-
+            throw new NotImplementedException();
         }
 
-        async Task<IEnumerable<Recipies>> IRecipiesRepository.GetAllAsync()
+        public Task DeleteAsync(Recipies entity)
         {
-            return (IEnumerable<Recipies>)_recipiesContext.Recipies.ToList();
+            throw new NotImplementedException();
+        }
+
+        public async Task<IEnumerable<Recipies>> GetAllAsync()
+        {
+            List<Recipies> recipies = new List<Recipies>();
+            recipies.Add(new Recipies()
+            {
+                Name = "Butter chicken curry",
+                CookingInstructions = "Cook well before serving",
+                Description = "Best Curry Ever",
+                Ingredients = new List<string> { "Butter", "Chicken", "Cream" }
+            });
+            return recipies;
+        }
+
+        public Task<Recipies> GetByIdAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task UpdateAsync(Recipies entity)
+        {
+            throw new NotImplementedException();
         }
     }
 }

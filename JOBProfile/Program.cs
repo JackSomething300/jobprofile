@@ -1,12 +1,20 @@
 using JOBProfile;
+using JOBProfile.Core.Repositories;
 using JOBProfile.Infrastructure.Data;
+using JOBProfile.Infrastructure.Repositories;
+using Microsoft.AspNetCore.Builder;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-
+builder.Services.AddScoped<IRecipiesRepository, RecipiesRepository>();
 var app = builder.Build();
+
+app.MapControllerRoute(
+    pattern: "{controller=Home}/{action=Index}/{id?}",
+    name: "default"
+    );
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

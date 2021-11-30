@@ -1,0 +1,17 @@
+﻿
+<h1>Welcome to your recipies</h1>
+
+
+<div id="recipiesMenu" class="">
+    <div v-for="rep in InitialRecipies">
+        <p>{{rep.name}}</p>
+        <p>{{rep.description}}</p>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="~/js/jquery-3.6.0.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src="~/vue/RecipiesVue.js"></script>
+}

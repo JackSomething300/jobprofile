@@ -43,5 +43,10 @@ namespace JOBProfile.Infrastructure.Repositories.Base
         {
             throw new NotImplementedException();
         }
+
+        Task<IEnumerable<T>> IRepository<T>.GetAllAsync()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
