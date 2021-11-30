@@ -1,16 +1,23 @@
+using Elasticsearch.Net;
 using JOBProfile;
 using JOBProfile.Core.Repositories;
 using JOBProfile.Infrastructure.Data;
 using JOBProfile.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Nest;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+var uri = new Uri("http://localhost:9200");
+builder.Services.AddSingleton(s => new ElasticClient(uri));
 builder.Services.AddScoped<IRecipiesRepository, RecipiesRepository>();
-var app = builder.Build();
+builder.Services.AddScoped<IElasticSearchProvider, ElasticSearchRepository>();
 
+
+var app = builder.Build();
 app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}",
     name: "default"

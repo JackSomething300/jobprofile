@@ -12,6 +12,12 @@ namespace JOBProfile.Infrastructure.Repositories
 {
     public class RecipiesRepository : /*Repository<JOBProfile.Core.Entities.Recipies>*/ IRecipiesRepository
     {
+        private readonly IElasticSearchProvider _elasticSearchProvider;
+
+        public RecipiesRepository(IElasticSearchProvider elasticSearchProvider)
+        {
+            _elasticSearchProvider = elasticSearchProvider;
+        }
         public Task<Recipies> AddAsync(Recipies entity)
         {
             throw new NotImplementedException();
@@ -24,14 +30,7 @@ namespace JOBProfile.Infrastructure.Repositories
 
         public async Task<IEnumerable<Recipies>> GetAllAsync()
         {
-            List<Recipies> recipies = new List<Recipies>();
-            recipies.Add(new Recipies()
-            {
-                Name = "Butter chicken curry",
-                CookingInstructions = "Cook well before serving",
-                Description = "Best Curry Ever",
-                Ingredients = new List<string> { "Butter", "Chicken", "Cream" }
-            });
+            var recipies = await _elasticSearchProvider.GetAllRecipies();
             return recipies;
         }
 
