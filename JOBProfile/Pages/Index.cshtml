@@ -1,9 +1,11 @@
 ﻿@page
 @model IndexModel
+
 @{
-    ViewData["Title"] = "Home page";
+    
 }
-<div>
+<div class="homepart">
+    <img class="profile" src="~/img/profile.png" style="width: 200px; height: 200px;">
     <div class="row">
         <div class="col-12 col-md-8">
             I'm Martin Meyer, a web developer specializing in the .Net framework,
@@ -15,17 +17,15 @@
     </div>
 
     <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
-    <div class="row">
+    <div class="row" style="padding-top: 2%">
         <div class="col-6 col-md-4 tech-block">
             Main:<br />
             C# (6 Years)<br />
             Azure (2 Year)<br />
-            .Net Core (3 year)<br />
+            .Net Core (2 year)<br />
             Javascript (5 Years)<br />
-            .Net Framework (6 Years)<br />
+            .Net Framework (6 Years)<br/>
         </div>
-    </div>
-    <div class="row">
         <div class="col-6 col-md-4 tech-block">
             Sidekick Stack:<br />
             SEO (4 Years)<br />
@@ -41,8 +41,6 @@
             Google Adwords (1 Year)<br />
             Google Search Console (1 Year)<br />
         </div>
-    </div>
-    <div class="row">
         <div class="col-6 col-md-4 tech-block">
             Design:<br />
             CSS/HTML/LESS/SCSS (5 Years)<br />
@@ -51,7 +49,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-6 col-md-4 tech-block">
+        <div class="col-10 col-md-8">
             Other:<br />
             Jquery + Typescript, Knockout (3 Years)<br />
             Jam - Stack (Headless CMS and .Net Core Front End)<br />

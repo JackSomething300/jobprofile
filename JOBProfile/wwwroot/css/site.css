@@ -14,7 +14,10 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: rgb(32, 32, 32);
+    color: white;
+    font-size: 20px
 }
 
 .tech-block {
@@ -22,4 +25,13 @@ body {
     width: 400px;
     height: 200px;
     padding-top: 10px;
+}
+
+.profile {
+    position: absolute;
+    width: 214px;
+    height: 208px;
+    left: 24px;
+    top: 61px;
+    border-radius: 104px;
 }

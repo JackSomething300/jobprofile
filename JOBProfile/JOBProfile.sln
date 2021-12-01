@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JOBProfile.Core", "..\JOBPr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JOBProfile.Infrastructure", "..\JOBProfile.Infrastructure\JOBProfile.Infrastructure.csproj", "{BAC965E6-D04B-4382-BBF6-B9A175000CA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobProfile.Web.Test", "..\JobProfile.Web.Test\JobProfile.Web.Test.csproj", "{ED0E5ABB-2E9C-4DA4-B082-037054C3A7F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobProfile.Web.Test", "..\JobProfile.Web.Test\JobProfile.Web.Test.csproj", "{ED0E5ABB-2E9C-4DA4-B082-037054C3A7F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeChallenges", "..\CodeChallenges\CodeChallenges.csproj", "{1C3BA05C-C215-4B01-A6EE-D13DF3D4CE1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{ED0E5ABB-2E9C-4DA4-B082-037054C3A7F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED0E5ABB-2E9C-4DA4-B082-037054C3A7F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED0E5ABB-2E9C-4DA4-B082-037054C3A7F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C3BA05C-C215-4B01-A6EE-D13DF3D4CE1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C3BA05C-C215-4B01-A6EE-D13DF3D4CE1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C3BA05C-C215-4B01-A6EE-D13DF3D4CE1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C3BA05C-C215-4B01-A6EE-D13DF3D4CE1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
