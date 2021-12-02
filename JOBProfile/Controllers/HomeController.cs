@@ -6,12 +6,10 @@ namespace JOBProfile.Controllers
     public class HomeController : Controller
     {
         private readonly IRecipiesRepository _recipiesRepository;
-        private readonly IElasticSearchProvider _elasticSearchProvider;
 
-        public HomeController(IRecipiesRepository recipiesRepository, IElasticSearchProvider elasticSearchProvider)
+        public HomeController(IRecipiesRepository recipiesRepository)
         {
             _recipiesRepository = recipiesRepository;
-            _elasticSearchProvider = elasticSearchProvider;
         }
 
         public IActionResult Index()
